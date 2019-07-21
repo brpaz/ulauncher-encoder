@@ -15,7 +15,7 @@
 
 Open ulauncher preferences window -> extensions -> add extension and paste the following url:
 
-```https://github.com/brpaz/ulauncher-netlify```
+```https://github.com/brpaz/ulauncher-encoder```
 
 ## Usage
 
