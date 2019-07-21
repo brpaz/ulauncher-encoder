@@ -1,0 +1,26 @@
+{
+    "required_api_version": "^2.0.0",
+    "name": "Encoder",
+    "description": "Encode/Decode a string into multiple formats",
+    "developer_name": "Bruno Paz",
+    "icon": "images/icon.png",
+    "options": {
+        "query_debounce": 0.05
+    },
+    "preferences": [
+        {
+            "id": "encoder_kw",
+            "type": "keyword",
+            "name": "Encoder",
+            "description": "Encodes a string into multiple formats",
+            "default_value": "encode"
+        },
+        {
+            "id": "decoder_kw",
+            "type": "keyword",
+            "name": "Decoder",
+            "description": "Decodes a string into multiple formats",
+            "default_value": "decode"
+        }
+    ]
+}
