@@ -84,6 +84,7 @@ class EncoderExtension(Extension):
 class KeywordQueryEventListener(EventListener):
     """ Handles input events """
     def on_event(self, event, extension):
+        """ Handles event """
         items = []
 
         text = event.get_argument() or ""
