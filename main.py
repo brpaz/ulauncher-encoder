@@ -37,7 +37,17 @@ class EncoderExtension(Extension):
 
         decoded_html = html.unescape(text)
 
+        try:
+            decoded_hex = bytes.fromhex(text).decode()
+        except ValueError:
+            decoded_hex = "Cannot decode input text as hex string"
+
         return [
+            ExtensionResultItem(icon='images/icon.png',
+                                name=decoded_hex,
+                                description='HEX Decoded',
+                                highlightable=False,
+                                on_enter=CopyToClipboardAction(decoded_hex)),
             ExtensionResultItem(icon='images/icon.png',
                                 name=decoded_base64,
                                 description='Base64 Decoded',
@@ -61,8 +71,14 @@ class EncoderExtension(Extension):
         encoded_base64 = base64.b64encode(bytes(text, "utf-8")).decode("utf-8")
         encoded_url = urllib.parse.quote_plus(text)
         encoded_html = html.escape(text)
+        encoded_hex = text.encode().hex().upper()
 
         return [
+            ExtensionResultItem(icon='images/icon.png',
+                                name=encoded_hex,
+                                description='HEX Encoded',
+                                highlightable=False,
+                                on_enter=CopyToClipboardAction(encoded_hex)),
             ExtensionResultItem(icon='images/icon.png',
                                 name=encoded_base64,
                                 description='Base64 Encoded',
