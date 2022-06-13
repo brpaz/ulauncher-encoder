@@ -28,7 +28,7 @@ jobs:
 
   release:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-    needs:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
