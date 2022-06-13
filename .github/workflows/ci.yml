@@ -28,7 +28,7 @@ jobs:
 
   release:
     if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
-    needs: build
+    needs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -36,7 +36,7 @@ jobs:
         uses: cycjimmy/semantic-release-action@v3
         with:
           extra_plugins: |
-            @semantic-release/changelo
+            @semantic-release/changelog
             @semantic-release/git
             @semantic-release/github
         env:
