@@ -5,7 +5,7 @@
     "developer_name": "Bruno Paz",
     "icon": "images/icon.png",
     "options": {
-        "query_debounce": 0.05
+        "query_debounce": 0.1
     },
     "preferences": [
         {
@@ -21,6 +21,48 @@
             "name": "Decoder",
             "description": "Decodes a string into multiple formats",
             "default_value": "decode"
+        },
+        {
+            "id": "kw_encode_base64",
+            "type": "keyword",
+            "name": "Base64 Encoder",
+            "description": "Encodes a string in base64 format",
+            "default_value": "b64:encode"
+        },
+        {
+            "id": "kw_decode_base64",
+            "type": "keyword",
+            "name": "Base64 Decoder",
+            "description": "Decodes a string in base64 format",
+            "default_value": "b64:decode"
+        },
+        {
+            "id": "kw_encode_url",
+            "type": "keyword",
+            "name": "URL Encoder",
+            "description": "Encodes a string in url format",
+            "default_value": "url:encode"
+        },
+        {
+            "id": "kw_decode_url",
+            "type": "keyword",
+            "name": "URL Decoder",
+            "description": "Decodes a string in base64 format",
+            "default_value": "url:decode"
+        },
+        {
+            "id": "kw_encode_html",
+            "type": "keyword",
+            "name": "HTML Encoder",
+            "description": "Encodes an HTML string",
+            "default_value": "html:encode"
+        },
+        {
+            "id": "kw_decode_html",
+            "type": "keyword",
+            "name": "HTML Decoder",
+            "description": "Decodes an HTML string",
+            "default_value": "html:decode"
         }
     ]
 }
